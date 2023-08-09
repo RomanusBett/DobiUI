@@ -8,10 +8,7 @@ A TypeScript-based application for managing meal servings, planning and record k
 - [Getting Started](#getting-started)
   - [Prerequisites](#prerequisites)
   - [Installation](#installation)
-- [Usage](#usage)
-- [Contributing](#contributing)
-- [License](#license)
-- [Contact](#contact)
+- [License](#License)
 
 ## About
 
@@ -35,13 +32,6 @@ Make sure you have these prerequisites in place to ensure a smooth setup and usa
 ### Installation
 
 To install the project, follow these steps:
-
-```bash
-npm install
-
-## Usage
-
-To use this project, follow these steps:
 
 1. **Clone the Repository**: Start by cloning this repository to your local machine using the following command:
 
