@@ -1,5 +1,5 @@
 import React from "react";
-import NavMenu from "../navigationmenu/navmenu";
+import NavMenu from "../../components/usrPgComponents/navigationmenu/navmenu";
 
 const AdminComponent:React.FC = ()=>{
     return(
