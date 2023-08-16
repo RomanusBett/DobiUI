@@ -2,8 +2,13 @@
     margin: 0;
 }
 .profile-pic-box{
-    height: 50px;
-    width: 50px;
-    border: 1px solid black;
+    height: 40px;
+    width: 40px;
+    border: 1px solid rgb(49, 159, 10);
+    border-radius: 50%;
+}
+.usr-profile-pic{
+    height: 40px;
+    width: 40px;
     border-radius: 50%;
 }
