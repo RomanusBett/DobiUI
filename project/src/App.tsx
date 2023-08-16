@@ -1,9 +1,8 @@
-import React from 'react';
 import './App.css';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import HomePageComponent from './components/homePg/homePage';
-import AdminComponent from './components/adminPgs/adminPg';
-import UserComponent from './components/userPgs/usrPg';
+import HomePageComponent from './pages/homePg/homePage';
+import AdminComponent from './pages/adminPgs/adminPg';
+import UserComponent from './pages/userPgs/usrPg';
 
 function App() {
   return (
