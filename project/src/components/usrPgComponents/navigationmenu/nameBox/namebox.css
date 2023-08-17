@@ -1,5 +1,7 @@
 .name-sec-container{
    display: flex;
+   align-items: center;
+   justify-content: center;
 }
 .logo-container{
     width: 40px;

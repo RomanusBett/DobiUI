@@ -3,12 +3,12 @@ import './customerSrch.css';
 
 const CustomerSearchBox:React.FC =()=>{
       return(
-        <div>
-            <div>
-            <h1>Customer Information</h1>
+        <div className="srch-customer-container">
+            <div className="customer-srch-title-box">
+            <h2>Customer Information</h2>
             </div>
-            <div>
-            <input placeholder="Customer Name"/>
+            <div className="customer-srch-title-box">
+            <input className="customer-srch-input" placeholder="Customer Name"/>
             </div>
         </div>
       )

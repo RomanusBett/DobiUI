@@ -1,0 +1,23 @@
+.srch-customer-container{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.customer-srch-title-box{
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.customer-srch-input{
+    width: 90%;
+    height: 2.5rem;
+    border: 2px solid #E7E8E2;
+    border-radius: 10px;
+    font-size: 1rem;
+}
+.customer-srch-input-box{
+    width: 100%;
+}

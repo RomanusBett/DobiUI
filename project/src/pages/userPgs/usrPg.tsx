@@ -14,7 +14,9 @@ const UserComponent:React.FC = ()=>{
                 <MealPeriodNav />
                 <Menu />
                 </div>
+                <div className="checkout-container">
                 <Checkout />
+                </div>
             </div>
         </div>
     )

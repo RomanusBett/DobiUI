@@ -5,6 +5,10 @@
     height: 96vh;
 }
 .items-container{
-    border: 1px solid black;
-    width: 100%;
+    width: 80%;
+    border-right: 2px solid #E7E8E2;
+    background-color: #f7f7f7;
+}
+.checkout-container{
+    width: 20%;
 }
