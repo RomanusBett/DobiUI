@@ -1,15 +1,12 @@
-import './menuItems.css';
 import React from 'react';
+import './menuItems.css';
+import ItemCards from './itemCards/itermCards';
 
 const MenuItems:React.FC = ()=>{
-    const meals:string[]=['tea', 'coffee', 'masala']
+    const meals:string[]=['tea', 'coffee', 'masala', 'beans', 'basmati', 'kahawa']
       return(
         <div>
-            {meals.map((item:string)=>{
-                return(
-                    <li key={item}>{item}</li>
-                )
-            })}
+            <ItemCards items={meals}/>
         </div>
       )
 }

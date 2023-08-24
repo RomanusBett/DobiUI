@@ -1,0 +1,17 @@
+.big-card-container{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: 10px;
+    row-gap: 1em;
+}
+.big-card-box{
+    border: 1px solid black;
+    display: flex;
+    height: 12rem;
+}
+.img-prc-container{
+    border: 1px solid black;
+}
+.desc-inc-container{
+    border: 1px solid black;
+}
