@@ -5,7 +5,7 @@ import ItemCards from './itemCards/itermCards';
 const MenuItems:React.FC = ()=>{
     const meals:string[]=['tea', 'coffee', 'masala', 'beans', 'basmati', 'kahawa']
       return(
-        <div>
+        <div className='mainItemcardsContainer'>
             <ItemCards items={meals}/>
         </div>
       )
