@@ -1,0 +1,15 @@
+.mainMenuContainer{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.mealItemBox{
+    width: 95%;
+}
+.mealItemBox h3{
+    opacity: 0.9;
+    font-size: 1.1rem;
+    font-weight: 600;
+}
