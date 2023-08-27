@@ -4,7 +4,7 @@ import './receipt.css';
 const Receipt:React.FC =()=>{
     return(
         <div>
-            <p>This is the receipt</p>
+            <h3>Order Summary</h3>
         </div>
     )
 }
