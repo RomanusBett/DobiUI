@@ -1,0 +1,70 @@
+.orderDetailsBigContainer,
+.orderAmtBigContainer,
+.orderVarBox {
+    display: flex;
+}
+.orderdescHeaderBox p{
+    font-weight: 500;
+}
+.orderDetailsBigContainer{
+    margin-top: 5%;
+    border-bottom: 2px solid rgb(235, 235, 235);
+    padding-bottom: 10px;
+}
+.orderDetBox{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.orderAmtBigContainer{
+    width: 100%;
+    justify-content: space-between;
+}
+.orderVarBox{
+    width: 50%;
+    align-items: center;
+    justify-content: space-around;
+}
+.orderMealImage{
+    height: 5rem;
+    width: 5rem;
+    border-radius: .5rem;
+}
+.orderDetailsContainer {
+    margin-top: 10%;
+    border-top: 1px solid rgb(235, 235, 235);
+    width: 90%;
+}
+.orderDescBox li{
+    margin-left: 3%;
+    width: 100%;
+    list-style: none;
+    font-weight: 500;
+}
+.orderVarBox button{
+    font-weight: 500;
+    font-size: 1.4rem;
+    height: 2rem;
+    width: 2rem;
+    border-radius: 50%;
+}
+.decButton{
+    background-color: rgb(233, 233, 233);
+    border: none;
+}
+.decButton:hover{
+    background-color: rgb(226, 226, 226);
+    cursor: pointer;
+    transform: scale(1.02);
+}
+.incButton{
+    background-color: #1877F2;
+    border: none;
+    color: #fff;
+}
+.incButton:hover{
+    background-color: #1271ed;
+    cursor: pointer;
+    transform: scale(1.02);
+}

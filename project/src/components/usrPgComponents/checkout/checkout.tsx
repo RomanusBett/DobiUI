@@ -6,7 +6,7 @@ import OrderDetails from "./orderdetails/orderdetails";
 
 const Checkout:React.FC=()=>{
     return(
-        <div>
+        <div className="checkoutContainer">
         <CustomerSearchBox />
         <OrderDetails />
         <Receipt />
