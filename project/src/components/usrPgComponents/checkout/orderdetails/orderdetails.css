@@ -59,12 +59,12 @@
     transform: scale(1.02);
 }
 .incButton{
-    background-color: #1877F2;
+    background-color: #006af4;
     border: none;
     color: #fff;
 }
 .incButton:hover{
-    background-color: #1271ed;
+    background-color: #015ace;
     cursor: pointer;
     transform: scale(1.02);
 }
