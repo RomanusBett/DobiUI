@@ -3,6 +3,11 @@
 .orderVarBox {
     display: flex;
 }
+.orderAmtBigContainer,
+.orderDescBox li,
+.orderDetBox{
+    width: 100%;
+}
 .orderdescHeaderBox p{
     font-weight: 500;
 }
@@ -12,13 +17,11 @@
     padding-bottom: 10px;
 }
 .orderDetBox{
-    width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
 }
 .orderAmtBigContainer{
-    width: 100%;
     justify-content: space-between;
 }
 .orderVarBox{
@@ -38,7 +41,6 @@
 }
 .orderDescBox li{
     margin-left: 3%;
-    width: 100%;
     list-style: none;
     font-weight: 500;
 }
@@ -49,22 +51,25 @@
     width: 2rem;
     border-radius: 50%;
 }
+.incButton,
 .decButton{
-    background-color: rgb(233, 233, 233);
     border: none;
 }
-.decButton:hover{
-    background-color: rgb(226, 226, 226);
+.decButton{
+    background-color: rgb(233, 233, 233);
+}
+.decButton:hover,
+.incButton:hover{
     cursor: pointer;
     transform: scale(1.02);
 }
+.decButton:hover{
+    background-color: rgb(226, 226, 226);
+}
 .incButton{
     background-color: #006af4;
-    border: none;
     color: #fff;
 }
 .incButton:hover{
     background-color: #015ace;
-    cursor: pointer;
-    transform: scale(1.02);
 }
