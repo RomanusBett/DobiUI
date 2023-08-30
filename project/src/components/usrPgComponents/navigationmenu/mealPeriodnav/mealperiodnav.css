@@ -1,17 +1,42 @@
-.bigMealNavContainer{
+.navBarContainer {
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
+    margin-top: 10px;
 }
-.meal-period-nav{
-    width: 95%;
-    border-radius: 27px;
-    height: 2.5rem;
+
+.navbar {
+    height: 3.5vh;
+    width: 94%;
+    border-radius: 3rem;
+    background-color: #F5F5F5;
+    display: flex;
+    padding: 3px;
+    text-align: center;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: #636363;
+    transition: background-color 0.3s ease;
+    border-radius: 3rem;
     display: flex;
     align-items: center;
-    justify-content: space-around;
-    background-color: #f2f2f2;
+    justify-content: center;
+    font-weight: 300;
+    flex-grow: 1; 
+}
+
+.navbar a:hover {
+    background-color: #fafafa;
+    color: #000000;
+}
+
+.navbar .active {
+    background-color: white;
+    color: #000000;
+    font-weight: 600;
+    margin: 0;
     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
-    margin-top: 1.4rem;
 }
