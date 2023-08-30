@@ -1,6 +1,7 @@
 import React from 'react';
 import './menuItems.css';
 import ItemCards from './itemCards/itermCards';
+import { mealItems } from '../../userPgs/mealItemsobj';
 
 const MenuItems:React.FC = ()=>{
     const meals:string[]=['tea', 'coffee', 'masala', 'beans', 'basmati', 'kahawa']

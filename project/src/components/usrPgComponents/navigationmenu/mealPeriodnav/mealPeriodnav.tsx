@@ -1,14 +1,26 @@
 import React from "react";
+import { Link, useLocation } from "react-router-dom";
 import './mealperiodnav.css';
 
-const MealPeriodNav: React.FC = () => {
+interface MealCurrentPeriods {
+    sMealPeriods: string[];
+}
+
+const MealPeriodNav: React.FC<MealCurrentPeriods> = ({sMealPeriods}) => {
+    const location = useLocation();
+
     return (
-        <div className="bigMealNavContainer">
-            <div className="meal-period-nav">
-                <li>breakfast</li>
-                <li>teaBreak</li>
-                <li>lunch</li>
-            </div>
+        <div className="navBarContainer">
+        <nav className="navbar">
+            {sMealPeriods.map((item)=>{
+                const mealUrl = `/user/${item.toLowerCase()}`
+                return(
+                    <Link to={mealUrl} className={location.pathname===mealUrl?'active':''}>
+                    {item}
+                </Link>
+                )
+            })}
+        </nav>
         </div>
     )
 }

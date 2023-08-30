@@ -2,7 +2,7 @@ import './App.css';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import HomePageComponent from './pages/homePg/homePage';
 import AdminComponent from './pages/adminPgs/adminPg';
-import UserComponent from './pages/userPgs/usrPg';
+import UserComponent from './components/usrPgComponents/userPgs/usrPg';
 
 function App() {
   return (
@@ -11,7 +11,7 @@ function App() {
           <Routes>
             <Route path='/' element={<HomePageComponent />}/>
             <Route path='/admin' element={<AdminComponent />}/>
-            <Route path='/home' element={<UserComponent />}/>
+            <Route path='/user/:meal' element={<UserComponent />}/>
           </Routes>
       </BrowserRouter>
     </div>
