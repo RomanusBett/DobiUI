@@ -4,7 +4,8 @@ export interface Item {
     mealPeriod: string,
     mealImage: string,
     subsidy: number, 
-    price: number;
+    price: number,
+    amount: number;
 }
 
 export interface ItemCardsProps {
@@ -13,4 +14,4 @@ export interface ItemCardsProps {
 
 export interface MealCurrentPeriods {
     sMealPeriods: string[];
-}
+} 
