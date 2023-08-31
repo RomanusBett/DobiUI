@@ -1,9 +1,6 @@
 import React from "react";
+import { AlterButtonProps } from "../../../interfaces/alter-button";
 
-interface AlterButtonProps {
-    children: string,
-    className: string;
-}
 
 const AlterButton:React.FC<AlterButtonProps>=({children, className})=>{
     return(

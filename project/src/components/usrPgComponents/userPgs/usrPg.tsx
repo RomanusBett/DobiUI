@@ -3,7 +3,7 @@ import NavMenu from "../navigationmenu/navmenu";
 import MealPeriodNav from "../navigationmenu/mealPeriodnav/mealPeriodnav";
 import Menu from "../menu/menu";
 import Checkout from "../checkout/checkout";
-import { mealPeriods } from "./mealItemsobj";
+import { mealPeriods } from "../../../dummyData/mealItemsobj";
 import './usrPg.css'
 import { useParams } from "react-router-dom";
 

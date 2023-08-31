@@ -9,8 +9,10 @@
 .navbar {
     height: 3.5vh;
     width: 94%;
+    font-size: .9rem;
     border-radius: 3rem;
-    background-color: #F5F5F5;
+    background-color: #ebebeb;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
     display: flex;
     padding: 3px;
     text-align: center;
@@ -18,24 +20,25 @@
 
 .navbar a {
     text-decoration: none;
-    color: #636363;
+    color: #757575;
     transition: background-color 0.3s ease;
     border-radius: 3rem;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-weight: 300;
+    font-weight: 500;
     flex-grow: 1; 
 }
 
-.navbar a:hover {
-    background-color: #fafafa;
+.navbar a:not(.active):hover {
+    background-color: #eaeaea;
     color: #000000;
 }
 
 .navbar .active {
     background-color: white;
     color: #000000;
+    font-size: 1rem;
     font-weight: 600;
     margin: 0;
     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;

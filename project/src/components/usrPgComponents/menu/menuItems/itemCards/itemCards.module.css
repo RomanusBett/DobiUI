@@ -56,6 +56,15 @@
     width: 2rem;
     border-radius: 50%;
 }
+.currencyType{
+    color: #006af4;
+    font-weight: 500;
+    font-size: .9rem;
+}
+.itemPrice{
+    font-weight: 600;
+    font-size: 1.3rem;
+}
 @media (max-width: 1700px) {
     .bigCardContainer{
         grid-template-columns: repeat(4, 1fr);

@@ -1,10 +1,8 @@
 import React from "react";
 import { Link, useLocation } from "react-router-dom";
 import './mealperiodnav.css';
+import { MealCurrentPeriods } from "../../../../interfaces/meal-items";
 
-interface MealCurrentPeriods {
-    sMealPeriods: string[];
-}
 
 const MealPeriodNav: React.FC<MealCurrentPeriods> = ({sMealPeriods}) => {
     const location = useLocation();
