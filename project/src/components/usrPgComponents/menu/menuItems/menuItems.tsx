@@ -11,15 +11,16 @@ const MenuItems:React.FC = ()=>{
     const location = useLocation();
     const pathSegments = location.pathname.split('/');
     const mealPeriodParam = pathSegments[pathSegments.length -1];
+    const mealData =  mealItems.map((o)=>({...o, amount: 1}))
 
     useEffect(()=>{
       if(mealPeriodParam){
-        const filtered = mealItems.filter((item)=>item.mealPeriod.toLowerCase() === mealPeriodParam)
+        const filtered = mealData.filter((item)=>item.mealPeriod.toLowerCase() === mealPeriodParam)
         setFilteredItems(filtered);
       } else {
-        setFilteredItems(mealItems);
+        setFilteredItems(mealData);
       }
-    },[mealPeriodParam]);
+    },[mealPeriodParam, mealData]);
 
       return(
         <div className='mainItemcardsContainer'>
