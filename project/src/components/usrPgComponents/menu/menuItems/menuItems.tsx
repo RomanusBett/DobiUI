@@ -1,13 +1,29 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import './menuItems.css';
 import ItemCards from './itemCards/itermCards';
-import { mealItems } from '../../userPgs/mealItemsobj';
+import { useLocation } from 'react-router-dom';
+import { mealItems } from '../../../../dummyData/mealItemsobj';
+import { Item } from '../../../../interfaces/meal-items';
 
 const MenuItems:React.FC = ()=>{
-    const meals:string[]=['tea', 'coffee', 'masala', 'beans', 'basmati', 'kahawa']
+    const [filteredItems, setFilteredItems] = useState<Item[]>([]);
+
+    const location = useLocation();
+    const pathSegments = location.pathname.split('/');
+    const mealPeriodParam = pathSegments[pathSegments.length -1];
+
+    useEffect(()=>{
+      if(mealPeriodParam){
+        const filtered = mealItems.filter((item)=>item.mealPeriod.toLowerCase() === mealPeriodParam)
+        setFilteredItems(filtered);
+      } else {
+        setFilteredItems(mealItems);
+      }
+    },[mealPeriodParam]);
+
       return(
         <div className='mainItemcardsContainer'>
-            <ItemCards items={meals}/>
+            <ItemCards items={filteredItems}/>
         </div>
       )
 }
