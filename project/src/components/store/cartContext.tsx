@@ -1,5 +1,5 @@
 import { createContext } from "react";
-import { CartContextType } from "../interfaces/cart-context";
+import { CartContextType } from "../../interfaces/cart-context";
 
 const CartContext = createContext<CartContextType>({
     items: [],

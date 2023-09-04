@@ -3,12 +3,15 @@ import HomeCss from './itemCards.module.css'
 import AlterButton from "../../../alterButton/alterButton";
 import OrderDetailsCss from '../../../checkout/orderdetails/orderdetails.module.css'
 import { ItemCardsProps } from "../../../../../interfaces/meal-items";
+import useCart from "./handlerfunctions";
 
 const ItemCards: React.FC<ItemCardsProps> = ({ items }) => {
+    const { cartItemAddHandler, removeItemFromCart } = useCart();  
+      
     return (
         <div className={HomeCss.bigCardContainer}>
             {items.map((item) => (
-                <div key={item.mealName}>
+                <div key={item.id}>
                     <div className={HomeCss.bigCardBox}>
                         <div className={HomeCss.imgPrcContainer}>
                             <div className={HomeCss.cardContentContainer}>
@@ -29,9 +32,9 @@ const ItemCards: React.FC<ItemCardsProps> = ({ items }) => {
                                 </div>
                                 <div>
                                     <div className={HomeCss.menuItemVarBox}>
-                                    <AlterButton children='-' className={`${OrderDetailsCss.decButton} ${OrderDetailsCss.minusBtn}`} />
+                                    <AlterButton onClick={()=>removeItemFromCart(item.id)} children='-' className={`${OrderDetailsCss.decButton} ${OrderDetailsCss.minusBtn}`} />
                                     <p>3</p>
-                                    <AlterButton children='+' className={`${OrderDetailsCss.incButton} ${OrderDetailsCss.plusBtn}`} />
+                                    <AlterButton onClick={cartItemAddHandler.bind(null, item)} children='+' className={`${OrderDetailsCss.incButton} ${OrderDetailsCss.plusBtn}`} />
                                     </div>
                                 </div>
                         </div>

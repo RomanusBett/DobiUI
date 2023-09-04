@@ -13,7 +13,7 @@ const MealPeriodNav: React.FC<MealCurrentPeriods> = ({sMealPeriods}) => {
             {sMealPeriods.map((item)=>{
                 const mealUrl = `/user/${item.toLowerCase()}`
                 return(
-                    <Link to={mealUrl} className={location.pathname===mealUrl?'active':''}>
+                    <Link key={item} to={mealUrl} className={location.pathname===mealUrl?'active':''}>
                     {item}
                 </Link>
                 )

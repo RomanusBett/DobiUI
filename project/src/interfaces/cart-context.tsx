@@ -12,7 +12,6 @@ export interface CartState {
     items: Item[],
     totalPrice: number,
     subsidy: number,
-    topay: number
   }
 
 export interface CartProviderProps {

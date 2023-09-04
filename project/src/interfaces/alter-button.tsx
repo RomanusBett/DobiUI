@@ -1,4 +1,5 @@
 export interface AlterButtonProps {
     children: string,
-    className: string;
+    className: string,
+    onClick: ()=>void
 }
