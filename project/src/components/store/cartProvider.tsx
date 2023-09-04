@@ -1,20 +1,14 @@
 import { useReducer } from "react";
 import CartContext from "./cartContext";
 import { Item } from "../../interfaces/meal-items";
-import { CartState, CartProviderProps } from "../../interfaces/cart-context";
+import { CartState, CartProviderProps, CartAction, CartContextType } from "../../interfaces/cart-context";
 
-const defaultCartState = {
+const defaultCartState: CartState = {
   items: [],
   totalPrice: 0,
   subsidy: 0,
 };
 
-type CartAction =
-  | { type: "ADD"; item: Item }
-  | { type: "REMOVE"; id: number }
-  | { type: "CLEAR" };
-
-console.log('clicked');
 const cartReducer = (state: CartState, action: CartAction) => {
   if (action.type === 'ADD') {
     const updatedTotal = state.totalPrice + action.item.price;
@@ -69,13 +63,32 @@ const cartReducer = (state: CartState, action: CartAction) => {
       topay: toBePaid
     }
   }
+  if (action.type === 'ADDONE') {
+    const existingCartItemIndex = state.items.findIndex(
+      (item) => item.id === action.id
+    );
+    const existingItem = state.items[existingCartItemIndex];
+    const updatedTotal = state.totalPrice + existingItem.price;
+    const updatedSubsidy = state.subsidy + existingItem.subsidy;
+    const toBePaid = updatedTotal - updatedSubsidy;
+    let updatedItems;
+    const updatedItem = { ...existingItem, amount: existingItem.amount + 1 };
+    updatedItems = [...state.items];
+    updatedItems[existingCartItemIndex] = updatedItem;
+
+    return {
+      items: updatedItems,
+      totalPrice: updatedTotal,
+      subsidy: updatedSubsidy,
+      topay: toBePaid
+    }
+  }
   if (action.type === 'CLEAR') {
     return defaultCartState;
   }
   return defaultCartState;
 }
 
-console.log('done___clicking');
 
 const CartProvider: React.FC<CartProviderProps> = (props) => {
   const [cartState, dispatchCartAction] = useReducer(cartReducer, defaultCartState);
@@ -85,6 +98,9 @@ const CartProvider: React.FC<CartProviderProps> = (props) => {
   const removeItemFromCartHandler = (key: number) => {
     dispatchCartAction({ type: 'REMOVE', id: key });
   }
+  const addSingleItemFromCartHandler = (key: number) => {
+    dispatchCartAction({ type: 'ADDONE', id: key });
+  }
   const clearCartHandler = () => {
     dispatchCartAction({ type: 'CLEAR' });
   }
@@ -93,6 +109,7 @@ const CartProvider: React.FC<CartProviderProps> = (props) => {
     items: cartState.items,
     addItem: addItemToCartHandler,
     removeItem: removeItemFromCartHandler,
+    addSingleItem: addSingleItemFromCartHandler,
     clearCart: clearCartHandler,
     totalPrice: cartState.totalPrice,
     subsidy: cartState.subsidy,

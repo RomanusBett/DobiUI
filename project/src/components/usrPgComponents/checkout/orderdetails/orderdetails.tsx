@@ -6,7 +6,7 @@ import CartContext from "../../../store/cartContext";
 import { Item } from "../../../../interfaces/meal-items";
 
 const OrderDetails:React.FC =()=>{
-    const { cartItemAddHandler, removeItemFromCart } = useCart();
+    const { removeItemFromCart, addSingleItemToCart } = useCart();
     const cartCtx = useContext(CartContext);   
     
     return(
@@ -28,7 +28,7 @@ const OrderDetails:React.FC =()=>{
                             <div className={OrderDetailsCss.orderVarBox}>
                               <AlterButton onClick={()=>removeItemFromCart(item.id)} children='-' className={`${OrderDetailsCss.decButton} ${OrderDetailsCss.minusBtn}`} />
                               <p>{item.amount}</p>
-                              <AlterButton onClick={cartItemAddHandler.bind(null, item)} children='+' className={`${OrderDetailsCss.incButton} ${OrderDetailsCss.plusBtn}`} />
+                              <AlterButton onClick={()=>addSingleItemToCart(item.id)} children='+' className={`${OrderDetailsCss.incButton} ${OrderDetailsCss.plusBtn}`} />
                             </div>
                             <div className={OrderDetailsCss.priceBox}>
                                <p>{item.price}</p>
