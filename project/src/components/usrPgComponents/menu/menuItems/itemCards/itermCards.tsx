@@ -6,7 +6,7 @@ import { ItemCardsProps } from "../../../../../interfaces/meal-items";
 import useCart from "./handlerfunctions";
 
 const ItemCards: React.FC<ItemCardsProps> = ({ items }) => {
-    const { cartItemAddHandler, removeItemFromCart } = useCart();  
+    const { cartItemAddHandler, removeItemFromCart, findItemAmount } = useCart();  
       
     return (
         <div className={HomeCss.bigCardContainer}>
@@ -33,7 +33,7 @@ const ItemCards: React.FC<ItemCardsProps> = ({ items }) => {
                                 <div>
                                     <div className={HomeCss.menuItemVarBox}>
                                     <AlterButton onClick={()=>removeItemFromCart(item.id)} children='-' className={`${OrderDetailsCss.decButton} ${OrderDetailsCss.minusBtn}`} />
-                                    <p>3</p>
+                                    <p>{findItemAmount(item.id)}</p>
                                     <AlterButton onClick={cartItemAddHandler.bind(null, item)} children='+' className={`${OrderDetailsCss.incButton} ${OrderDetailsCss.plusBtn}`} />
                                     </div>
                                 </div>

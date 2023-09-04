@@ -13,14 +13,20 @@ const useCart = () => {
         cartCtx.removeItem(key)
     };
 
-    const addSingleItemToCart = (key: number) =>{
+    const addSingleItemToCart = (key: number) => {
         cartCtx.addSingleItem(key)
+    }
+
+    const findItemAmount = (key:number)=>{
+        const foundItem = cartCtx.items.find(cartItem => cartItem.id === key)
+        return foundItem ? (foundItem.amount || 0) : 0; 
     }
 
     return {
         cartItemAddHandler,
         removeItemFromCart,
         addSingleItemToCart,
+        findItemAmount
     };
 }
 export default useCart;
