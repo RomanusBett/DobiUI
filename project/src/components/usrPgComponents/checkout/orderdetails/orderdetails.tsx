@@ -4,6 +4,7 @@ import AlterButton from "../../alterButton/alterButton";
 import useCart from "../../menu/menuItems/itemCards/handlerfunctions";
 import CartContext from "../../../store/cartContext";
 import { Item } from "../../../../interfaces/meal-items";
+import HomeCss from '../../menu/menuItems/itemCards/itemCards.module.css'
 
 const OrderDetails:React.FC =()=>{
     const { removeItemFromCart, addSingleItemToCart } = useCart();
@@ -31,7 +32,7 @@ const OrderDetails:React.FC =()=>{
                               <AlterButton onClick={()=>addSingleItemToCart(item.id)} children='+' className={`${OrderDetailsCss.incButton} ${OrderDetailsCss.plusBtn}`} />
                             </div>
                             <div className={OrderDetailsCss.priceBox}>
-                               <p>{item.price}</p>
+                               <p><span className={HomeCss.currencyType}>ksh</span> <span className={OrderDetailsCss.checkoutItemPrice}>{item.price}</span></p>
                             </div>
                         </div>
                     </div>

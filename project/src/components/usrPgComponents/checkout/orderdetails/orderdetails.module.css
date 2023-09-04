@@ -73,3 +73,6 @@
 .incButton:hover{
     background-color: #015ace;
 }
+.checkoutItemPrice{
+    font-weight: 600;
+}
