@@ -20,7 +20,7 @@ const MenuItems:React.FC = ()=>{
       } else {
         setFilteredItems(mealData);
       }
-    },[]);
+    },[mealPeriodParam]);
 
       return(
         <div className='mainItemcardsContainer'>
