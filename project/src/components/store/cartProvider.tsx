@@ -1,7 +1,7 @@
 import { useReducer } from "react";
 import CartContext from "./cartContext";
 import { Item } from "../../interfaces/meal-items";
-import { CartState, CartProviderProps, CartAction, CartContextType } from "../../interfaces/cart-context";
+import { CartState, CartProviderProps, CartAction } from "../../interfaces/cart-context";
 
 const defaultCartState: CartState = {
   items: [],
@@ -20,8 +20,6 @@ const cartReducer = (state: CartState, action: CartAction) => {
     );
     const existingCartItem = state.items[existingCartItemIndex];
     let updatedItems;
-    console.log(existingCartItem);
-
     if (existingCartItem) {
       const updatedItem = {
         ...existingCartItem,
@@ -88,7 +86,6 @@ const cartReducer = (state: CartState, action: CartAction) => {
   }
   return defaultCartState;
 }
-
 
 const CartProvider: React.FC<CartProviderProps> = (props) => {
   const [cartState, dispatchCartAction] = useReducer(cartReducer, defaultCartState);

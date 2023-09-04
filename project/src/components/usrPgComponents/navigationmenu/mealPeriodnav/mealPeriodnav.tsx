@@ -3,7 +3,6 @@ import { Link, useLocation } from "react-router-dom";
 import './mealperiodnav.css';
 import { MealCurrentPeriods } from "../../../../interfaces/meal-items";
 
-
 const MealPeriodNav: React.FC<MealCurrentPeriods> = ({sMealPeriods}) => {
     const location = useLocation();
 
