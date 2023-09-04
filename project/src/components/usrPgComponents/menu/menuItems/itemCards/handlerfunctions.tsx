@@ -13,9 +13,14 @@ const useCart = () => {
         cartCtx.removeItem(key)
     };
 
+    const addSingleItemToCart = (key: number) =>{
+        cartCtx.addSingleItem(key)
+    }
+
     return {
         cartItemAddHandler,
         removeItemFromCart,
+        addSingleItemToCart,
     };
 }
 export default useCart;
